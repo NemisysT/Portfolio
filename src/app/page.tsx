@@ -5,7 +5,7 @@ import Projects from "@/components/Projects";
 import { AnimatedTestimonialsDemo } from "@/components/Achievements";
 import { SoftSkillsDemo } from "@/components/Events"; // Corrected named import
 import Footer from "@/components/Footer";
-import { Meteors } from "@/components/meteors"; // Corrected named import
+
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
         </section>
 
         {/* Achievements Section */}
-        <section id="achievements" className="py-20 py-20 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800">
+        <section id="achievements" className="py-20 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-4xl font-extrabold text-center mb-8">
               Achievements
