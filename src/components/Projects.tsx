@@ -120,10 +120,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 mt-0">
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2 
-          className="text-4xl font-bold mb-12 text-center text-white"
+          className="text-4xl font-bold mb-12 text-center text-white "
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -131,7 +131,7 @@ export default function Projects() {
           Featured Projects
         </motion.h2>
         <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-3 gap-x-12 gap-y-0"       // Adjust the row gap
+          className="grid grid-cols-1 sm:grid-cols-3 gap-x-12 gap-y-0 "       // Adjust the row gap
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
