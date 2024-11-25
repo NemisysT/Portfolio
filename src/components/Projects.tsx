@@ -19,7 +19,7 @@ const projects: Project[] = [
     title: 'HydroSave',
     image: '/images/hydrosave.jpg',
     description: 'Water usage optimization tool featuring calculators, forums, and case studies.',
-    demo: 'https://hydrosave.example.com',
+    demo: '',
     code: 'https://github.com/NemisysT/hydrosave',
   },
   {
@@ -33,7 +33,7 @@ const projects: Project[] = [
     title: 'Airline Ticket Management',
     image: '/images/airline-ticket.jpg',
     description: 'Desktop app with rescheduling and booking options.',
-    demo: 'https://airline-ticket.example.com',
+    demo: '',
     code: 'https://github.com/NemisysT/Airline',
   },
   {
@@ -41,13 +41,13 @@ const projects: Project[] = [
     image: '/images/disbot.jpg',
     description: 'Award-winning Discord bot.',
     demo: '',
-    code: '',
+    code: 'https://github.com/NemisysT/DisBot',
   },
   {
     title: 'Racket Roulette',
     image: '/images/badminton.jpg',
     description: 'A personal Project to enhance React Skills.',
-    demo: 'https://disbot.example.com',
+    demo: '',
     code: 'https://github.com/NemisysT/Badminton',
   },
   {
@@ -55,7 +55,7 @@ const projects: Project[] = [
     image: '/images/tes.jpg',
     description: 'A Discord bot with QOL features.',
     demo: '',
-    code: '',
+    code: 'https://github.com/NemisysT/Tesseract',
   },
 ]
 
@@ -64,8 +64,6 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  
-
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-gradient-to-r from-gray-800 to-gray-900 relative group/card dark:hover:shadow-2xl dark:hover:shadow-gray-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full sm:w-[22rem] h-auto rounded-xl p-6 border">
@@ -92,15 +90,18 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           />
         </CardItem>
         <div className="flex justify-between items-center mt-20">
-          <CardItem
-            translateZ={20}
-            as={Link}
-            href={project.demo}
-            target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal text-gray-300 dark:text-white"
-          >
-            Live Demo →
-          </CardItem>
+          {/* Conditionally render the Live Demo button */}
+          {project.demo && (
+            <CardItem
+              translateZ={20}
+              as={Link}
+              href={project.demo}
+              target="__blank"
+              className="px-4 py-2 rounded-xl text-xs font-normal text-gray-300 dark:text-white"
+            >
+              Live Demo →
+            </CardItem>
+          )}
           <CardItem
             translateZ={20}
             as={Link}
@@ -115,6 +116,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     </CardContainer>
   )
 }
+
 
 export default function Projects() {
   return (
