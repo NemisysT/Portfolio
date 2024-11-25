@@ -1,5 +1,5 @@
 import React from "react";
-import { Meteors } from "./meteors";  // Assuming Meteors component is located here
+import { Meteors } from "./meteors"; // Assuming Meteors component is located here
 
 export function SoftSkillsDemo() {
   return (
@@ -20,7 +20,6 @@ export function SoftSkillsDemo() {
             <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
               I had the privilege of hosting Investiture 2022, where I addressed over 750 people, maintaining a positive, energetic atmosphere throughout.
             </p>
-            {/* <button className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300">Explore</button> */}
 
             {/* Meteor effect */}
             <Meteors number={20} />
@@ -41,7 +40,6 @@ export function SoftSkillsDemo() {
             <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
               As the leader during Investiture 2022, I coordinated teams, delegated tasks, and ensured everything ran smoothly to deliver a successful event.
             </p>
-            {/* <button className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300">Explore</button> */}
 
             {/* Meteor effect */}
             <Meteors number={20} />
@@ -60,9 +58,8 @@ export function SoftSkillsDemo() {
 
             <h1 className="font-bold text-xl text-white mb-4 relative z-50">Event Hosting</h1>
             <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
-              I successfully organized Ideathon'24, managing speakers, schedules, and participant engagement, ensuring everything ran seamlessly.
+              I successfully organized Ideathon&apos;24, managing speakers, schedules, and participant engagement, ensuring everything ran seamlessly.
             </p>
-            {/* <button className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300">Explore</button> */}
 
             {/* Meteor effect */}
             <Meteors number={20} />

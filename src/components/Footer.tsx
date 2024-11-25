@@ -1,5 +1,6 @@
-import { FaLinkedin, FaGithub, FaCodepen, FaInstagram } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { SiCodechef } from "react-icons/si";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -24,6 +25,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }
-

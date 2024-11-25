@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CardBody, CardContainer, CardItem } from './CardContainer'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 // Define the Project interface to type the project object
@@ -66,7 +65,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  const [isHovered, setIsHovered] = useState(false)
+  
 
   return (
     <CardContainer className="inter-var">
