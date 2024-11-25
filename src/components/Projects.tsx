@@ -42,8 +42,8 @@ const projects: Project[] = [
     title: 'DisBot',
     image: '/images/disbot.jpg',
     description: 'Award-winning Discord bot.',
-    demo: 'https://disbot.example.com',
-    code: 'https://github.com/yourusername/disbot',
+    demo: '',
+    code: '',
   },
   {
     title: 'Racket Roulette',
@@ -56,8 +56,8 @@ const projects: Project[] = [
     title: 'Tesseract',
     image: '/images/tes.jpg',
     description: 'A Discord bot with QOL features.',
-    demo: 'https://disbot.example.com',
-    code: 'https://github.com/NemisysT/Tesseract',
+    demo: '',
+    code: '',
   },
 ]
 
