@@ -3,10 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FaHome,FaProjectDiagram } from "react-icons/fa";
-import { GiSkills,GiAchievement } from "react-icons/gi";
+import { FaHome, FaProjectDiagram } from "react-icons/fa";
+import { GiSkills, GiAchievement } from "react-icons/gi";
 import { FloatingDock } from "./floating-dock"; // Adjust path as needed
 import Image from "next/image";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -98,13 +99,19 @@ export default function Hero() {
             >
               Explore Projects
             </Link>
-            <Link
-              href="https://drive.google.com/file/d/15srXLUA3mH7ij2BC2s7sbNxwdBvw0ZLl/view"
-              className="px-6 py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700"
-              aria-label="Get in Touch"
+            <a
+              href="https://drive.google.com/file/d/1KEdOfJ30iaKUK9_W-hmV7-Yn0hmGaI7e/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Resume"
             >
-              Resume
-            </Link>
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                className="bg-gray-800 text-gray-200 px-6 py-3 font-medium"
+              >
+                Resume
+              </HoverBorderGradient>
+            </a>
           </motion.div>
         </div>
 

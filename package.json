@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@radix-ui/react-tooltip": "^1.2.0",
     "@react-three/fiber": "^8.17.10",
     "@tabler/icons-react": "^3.22.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.11.17",
+    "framer-motion": "^11.18.2",
     "lucide-react": "^0.460.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "15.0.3",
@@ -20,7 +24,8 @@
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-dropzone": "^14.3.5",
     "react-icons": "^5.3.0",
-    "tailwind-merge": "^2.5.4",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
     "three": "^0.170.0"
   },
   "devDependencies": {
