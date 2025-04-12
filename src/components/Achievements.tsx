@@ -25,6 +25,13 @@ export function AnimatedTestimonialsDemo() {
     },
     {
       quote:
+        "Placed 2nd in The Commit and Conquer Event hosted by ByteXync.",
+      name: "Hackathon Enthusiast",
+      designation: "Runner Up",
+      src: "/images/Coc.jpg",
+    },
+    {
+      quote:
         "Placed 14th in Cipher Chase: A Capture the Flag Contest based on CyberSecurity by IIITB.",
       name: "CTF Participant",
       designation: "Cipher Chase 14th Place",
@@ -36,6 +43,13 @@ export function AnimatedTestimonialsDemo() {
       name: "Hackathon Enthusiast",
       designation: "Botcraft Hackathon 3rd Place",
       src: "/images/disbot.jpg",
+    },
+    {
+      quote:
+        "Placed top 20 in The Cepheus Hackathon hosted by CodeClub.",
+      name: "Hackathon Enthusiast",
+      designation: "Cepheus Hackathon top 20",
+      src: "/images/cepheus.jpg",
     },
   ];
 
