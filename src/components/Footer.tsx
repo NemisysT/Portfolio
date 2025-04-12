@@ -21,7 +21,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-sm text-gray-400">
-          &copy; 2024 Mervin Mandanna. All rights reserved.
+          &copy; 2025 Mervin Mandanna. All rights reserved.
         </p>
       </div>
     </footer>

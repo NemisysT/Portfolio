@@ -39,10 +39,7 @@ const SkillTree = ({ skillsData, controls }: SkillTreeProps) => {
       const sectionAngle = (2 * Math.PI) / totalCategories
       const angle = index * sectionAngle - Math.PI / 2 // Start from top
 
-      // Determine which quadrant this category is in
-      const quadrant = Math.floor((index * 4) / totalCategories)
-
-      // Calculate category position
+       // Calculate category position
       const distance = 30 // Distance from center
       const x = centerX + distance * Math.cos(angle)
       const y = centerY + distance * Math.sin(angle)
