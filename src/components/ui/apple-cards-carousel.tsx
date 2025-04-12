@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState, createContext, useContext } from "react"
+import React, { useEffect, useRef, useState, createContext, useContext , useCallback } from "react"
 import { IconArrowNarrowLeft, IconArrowNarrowRight, IconX } from "@tabler/icons-react"
 import { cn } from "@/lib/utils"
 import { AnimatePresence, motion } from "framer-motion"
@@ -148,7 +148,13 @@ export const Card = ({
 }) => {
   const [open, setOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
-  const { onCardClose, currentIndex } = useContext(CarouselContext)
+  const { onCardClose } = useContext(CarouselContext)
+
+  // Memoized handleClose to safely use inside useEffect
+  const handleClose = useCallback(() => {
+    setOpen(false)
+    onCardClose(index)
+  }, [onCardClose, index])
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -165,17 +171,12 @@ export const Card = ({
 
     window.addEventListener("keydown", onKeyDown)
     return () => window.removeEventListener("keydown", onKeyDown)
-  }, [open])
+  }, [open, handleClose])
 
-  useOutsideClick(containerRef, () => handleClose())
+  useOutsideClick(containerRef, handleClose)
 
   const handleOpen = () => {
     setOpen(true)
-  }
-
-  const handleClose = () => {
-    setOpen(false)
-    onCardClose(index)
   }
 
   return (
