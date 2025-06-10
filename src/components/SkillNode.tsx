@@ -21,7 +21,7 @@ import {
   SiGithub,
   SiSelenium,
   SiCplusplus,
-  SiVisualstudiocode,
+  
   SiSpine,
   SiPostgresql,
   SiRedux,
@@ -29,6 +29,7 @@ import {
 } from "react-icons/si"
 import type { JSX } from "react"
 import { FaJava } from "react-icons/fa";
+import { BiLogoVisualStudio } from "react-icons/bi";
 
 
 interface SkillNodeProps {
@@ -64,7 +65,7 @@ const SkillNode = ({ name, x, y, category, index, controls }: SkillNodeProps) =>
       Selenium: <SiSelenium className="text-green-400" />,
       Java: <FaJava className="text-red-500" />,
       "C/C++": <SiCplusplus className="text-blue-500" />,
-      "VS Code": <SiVisualstudiocode className="text-blue-500" />,
+      "VS Code": <BiLogoVisualStudio className="text-blue-500" />,
       Spline: <SiSpine className="text-purple-400" />,
       PostgreSQL: <SiPostgresql className="text-blue-400" />,
       Redux: <SiRedux className="text-purple-500" />,
