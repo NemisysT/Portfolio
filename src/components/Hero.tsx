@@ -100,7 +100,7 @@ export default function Hero() {
               Explore Projects
             </Link>
             <a
-              href="https://drive.google.com/file/d/1KEdOfJ30iaKUK9_W-hmV7-Yn0hmGaI7e/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1ZDgL_mUML9xIQ9B_3jMIIodsMxFh7O_4/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download Resume"
