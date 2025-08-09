@@ -7,7 +7,7 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-  useVelocity,
+  // Removed useVelocity as it's not used
   useAnimationControls,
   type AnimationControls,
 } from "framer-motion"
@@ -47,8 +47,9 @@ export const DraggableCardBody = ({
   }, [initialX, initialY, initialRotate, x, y, rotate])
 
   // physics biatch
-  const velocityX = useVelocity(mouseX)
-  const velocityY = useVelocity(mouseY)
+  // Removed velocityX and velocityY as they are not used
+  // const velocityX = useVelocity(mouseX)
+  // const velocityY = useVelocity(mouseY)
 
   const springConfig = {
     stiffness: 100,
@@ -164,11 +165,20 @@ export const DraggableCardBody = ({
 export const DraggableCardContainer = ({
   className,
   children,
+  style, // Added style prop
 }: {
   className?: string
   children?: React.ReactNode
+  style?: React.CSSProperties // Define type for style
 }) => {
   // This component now only provides the perspective and relative context.
   // Sizing and centering are handled by the parent (Project.tsx) via style prop.
-  return <div className={cn("[perspective:3000px]", className)}>{children}</div>
+  return (
+    <div
+      className={cn("[perspective:3000px]", className)}
+      style={style} // Apply the style prop here
+    >
+      {children}
+    </div>
+  )
 }

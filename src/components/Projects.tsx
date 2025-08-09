@@ -3,6 +3,7 @@
 import { DraggableCardBody, DraggableCardContainer } from "@/components/ui/draggable-card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image" // Import Image from next/image
 import { useState, useRef, useEffect } from "react"
 import type { AnimationControls } from "framer-motion"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -23,36 +24,32 @@ interface CardState {
 }
 
 export default function Projects() {
-    const projects: Project[] = [
+  const projects: Project[] = [
     {
       title: "HydroSave",
       image: "/images/hydrosave.jpg",
-      description:
-        "HydroSave is a platform dedicated to optimizing water use in agriculture...",
+      description: "HydroSave is a platform dedicated to optimizing water use in agriculture...",
       demo: "",
       code: "https://github.com/NemisysT/hydrosave",
     },
     {
       title: "Norway Tours",
       image: "/images/norway-tours.jpg",
-      description:
-        "Tours-Norway is a web-based platform that invites users on a digital journey...",
+      description: "Tours-Norway is a web-based platform that invites users on a digital journey...",
       demo: "https://nemisyst.github.io/Tours-Norway/",
       code: "https://github.com/NemisysT/Tours-Norway",
     },
     {
       title: "Airline Ticket Management",
       image: "/images/airline-ticket.jpg",
-      description:
-        "The Airline Ticket Management System is a software application designed...",
+      description: "The Airline Ticket Management System is a software application designed...",
       demo: "",
       code: "https://github.com/NemisysT/Airline",
     },
     {
       title: "DisBot",
       image: "/images/disbot.jpg",
-      description:
-        "DisBot is a modular and customizable Discord bot designed for automation...",
+      description: "DisBot is a modular and customizable Discord bot designed for automation...",
       demo: "",
       code: "https://github.com/NemisysT/DisBot",
     },
@@ -73,8 +70,7 @@ export default function Projects() {
     {
       title: "InternGeanie",
       image: "/images/Intern.png",
-      description:
-        "This project simplifies the internship application process by leveraging AI...",
+      description: "This project simplifies the internship application process by leveraging AI...",
       demo: "",
       code: "https://github.com/NemisysT/Axios.git",
     },
@@ -88,8 +84,7 @@ export default function Projects() {
     {
       title: "Alertic",
       image: "/images/climate.jpg",
-      description:
-        "Alertic is a real-time climate monitoring and disaster alert platform...",
+      description: "Alertic is a real-time climate monitoring and disaster alert platform...",
       demo: "",
       code: "https://github.com/NemisysT/Alertic.git",
     },
@@ -109,7 +104,7 @@ export default function Projects() {
       demo: "https://met-air.lovable.app", // Replace with the real Met Air website URL if available
       code: "https://github.com/NemisysT/Met-Air.git", // Replace with the actual repo link if different
     },
-  ];
+  ]
   // Function to generate scattered positions dynamically
   const generateScatteredPositions = (numCards: number): CardState[] => {
     const basePositions: CardState[] = [
@@ -280,11 +275,17 @@ export default function Projects() {
               initialRotate={currentCardData[index]?.rotate ?? 0}
               setControlsRef={(controls) => (cardControlsRefs.current[index] = controls)}
             >
-              <img
-                src={project.image || "/placeholder.svg"}
-                alt={project.title}
-                className="pointer-events-none relative z-10 h-48 w-full object-cover rounded-md"
-              />
+              <div className="relative h-48 w-full">
+                {" "}
+                {/* Wrapper div for Image fill */}
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  fill // Use fill to make the image take up the parent's size
+                  className="pointer-events-none object-cover rounded-md" // object-cover and rounded-md
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Example sizes prop
+                />
+              </div>
               <h3 className="mt-4 text-center text-xl font-bold text-neutral-700 dark:text-neutral-300">
                 {project.title}
               </h3>
