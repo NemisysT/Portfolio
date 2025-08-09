@@ -21,16 +21,14 @@ import {
   SiGithub,
   SiSelenium,
   SiCplusplus,
-  
   SiSpine,
   SiPostgresql,
   SiRedux,
   SiAngular,
 } from "react-icons/si"
 import type { JSX } from "react"
-import { FaJava } from "react-icons/fa";
-import { BiLogoVisualStudio } from "react-icons/bi";
-
+import { FaJava } from "react-icons/fa"
+import { BiLogoVisualStudio } from "react-icons/bi"
 
 interface SkillNodeProps {
   name: string
@@ -75,25 +73,24 @@ const SkillNode = ({ name, x, y, category, index, controls }: SkillNodeProps) =>
     return iconMap[skillName] || <span className="text-white">•</span>
   }
 
-  // Get color based on category
-  const getCategoryColor = (category: string) => {
+  // Get color based on category (updated for organic theme)
+  const getCategoryColor = (cat: string) => {
     const colorMap: Record<string, string> = {
-      Frontend: "rgba(56, 189, 248, 0.7)", // cyan
-      Backend: "rgba(139, 92, 246, 0.7)", // purple
-      Database: "rgba(52, 211, 153, 0.7)", // emerald
-      Tools: "rgba(251, 146, 60, 0.7)", // orange
-      Learning: "rgba(236, 72, 153, 0.7)", // pink
+      Frontend: "#8BC34A", // Light Green
+      Backend: "#4CAF50", // Green
+      Database: "#795548", // Brown
+      Tools: "#607D8B", // Blue Grey
+      Learning: "#BA68C8", // Soft Purple
     }
-
-    return colorMap[category] || "rgba(255, 255, 255, 0.7)"
+    return colorMap[cat] || "#FFFFFF"
   }
 
   return (
-        <motion.div
+    <motion.div
       className="absolute z-20 transform -translate-x-1/2 -translate-y-1/2"
       style={{
         left: `${x.toFixed(2)}%`, // Round to 2 decimal places
-        top: `${y.toFixed(2)}%`,  // Round to 2 decimal places
+        top: `${y.toFixed(2)}%`, // Round to 2 decimal places
       }}
       initial={{ scale: 0, opacity: 0 }}
       animate={controls}
@@ -108,14 +105,11 @@ const SkillNode = ({ name, x, y, category, index, controls }: SkillNodeProps) =>
           },
         },
       }}
-      whileHover={{
-        scale: 1.2,
-        transition: { duration: 0.2 },
-      }}
+      // Removed whileHover prop
     >
       <div
-        className="flex flex-col items-center justify-center w-16 h-16 rounded-full bg-gray-900/80 border border-gray-700 backdrop-blur-sm"
-        style={{ boxShadow: `0 0 15px ${getCategoryColor(category)}` }}
+        className="flex flex-col items-center justify-center w-16 h-16 rounded-3xl bg-gray-900/80 border border-gray-700 backdrop-blur-sm"
+        style={{ boxShadow: `0 0 10px ${getCategoryColor(category)}` }}
       >
         <div className="text-2xl mb-1">{getIcon(name)}</div>
         <span className="text-xs font-medium text-white text-center leading-none">{name}</span>
