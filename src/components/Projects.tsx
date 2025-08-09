@@ -228,7 +228,7 @@ export default function Projects() {
         className="relative w-full flex items-center justify-center"
         style={{
           minHeight: currentLayout === "grid" ? `${gridDimensions.height + 100}px` : "800px", // Add buffer for padding/shadows
-          height: currentLayout === "grid" ? `${gridDimensions.height + 100}px` : "auto", // Set height explicitly for grid
+          height: currentLayout === "grid" ? `${gridDimensions.height + 100}px` : "800px", // Set height explicitly for both layouts
         }}
       >
         {" "}
@@ -286,18 +286,12 @@ export default function Projects() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Example sizes prop
                 />
               </div>
-              <h3 className="mt-4 text-center text-xl font-bold text-neutral-700 dark:text-neutral-300">
-                {project.title}
-              </h3>
-              <p className="mt-2 text-center text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3">
-                {project.description}
-              </p>
+              <h3 className="mt-4 text-center text-xl font-bold text-neutral-900">{project.title}</h3>
+              <p className="mt-2 text-center text-sm text-neutral-800 line-clamp-3">{project.description}</p>
               <div className="mt-4 flex justify-center gap-2">
                 {project.demo && (
                   <Link href={project.demo} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm">
-                      Demo
-                    </Button>
+                    <Button size="sm">Demo</Button>
                   </Link>
                 )}
                 {project.code && (
